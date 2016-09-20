@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4y7-M9-vVW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Person Details View Controller-->
+        <scene sceneID="bYQ-tV-RPg">
+            <objects>
+                <viewController id="4y7-M9-vVW" customClass="PersonDetailsViewController" customModule="MVC_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1fa-GA-eif"/>
+                        <viewControllerLayoutGuide type="bottom" id="PYJ-qu-nOG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mOK-Re-oVw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fUh-Dy-2Re">
+                                <rect key="frame" x="12" y="200" width="560" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gI-qF-2Nk">
+                                        <rect key="frame" x="238" y="0.0" width="84" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ageLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twj-xc-L0c">
+                                        <rect key="frame" x="245" y="67" width="70" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phoneLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXV-zR-LSz">
+                                        <rect key="frame" x="235" y="134" width="90" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="TbS-Qv-Cxo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fUh-Dy-2Re" firstAttribute="top" secondItem="mOK-Re-oVw" secondAttribute="topMargin" id="1Pk-Vu-DNO"/>
+                            <constraint firstItem="fUh-Dy-2Re" firstAttribute="leading" secondItem="mOK-Re-oVw" secondAttribute="leadingMargin" constant="-8" id="CsL-CB-j6k"/>
+                            <constraint firstItem="PYJ-qu-nOG" firstAttribute="top" secondItem="fUh-Dy-2Re" secondAttribute="bottom" id="FhF-H4-r6M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fUh-Dy-2Re" secondAttribute="trailing" constant="8" id="NvN-XE-cYa"/>
+                            <constraint firstItem="fUh-Dy-2Re" firstAttribute="centerY" secondItem="mOK-Re-oVw" secondAttribute="centerY" id="Olv-VF-u9g"/>
+                            <constraint firstItem="fUh-Dy-2Re" firstAttribute="centerX" secondItem="mOK-Re-oVw" secondAttribute="centerX" constant="-8" id="uEv-1a-ihy"/>
+                            <constraint firstItem="fUh-Dy-2Re" firstAttribute="top" secondItem="mOK-Re-oVw" secondAttribute="topMargin" constant="200" id="v60-wh-ztp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Pk-Vu-DNO"/>
+                                <exclude reference="Olv-VF-u9g"/>
+                                <exclude reference="FhF-H4-r6M"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="twj-xc-L0c" id="Yu2-8M-j0g"/>
+                        <outlet property="nameLabel" destination="9gI-qF-2Nk" id="w8f-3l-ukR"/>
+                        <outlet property="phoneLabel" destination="MXV-zR-LSz" id="fzG-C2-jiH"/>
+                        <outlet property="stackView" destination="fUh-Dy-2Re" id="dE5-82-bux"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxY-Hx-Brd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337" y="351"/>
+        </scene>
+    </scenes>
+</document>
