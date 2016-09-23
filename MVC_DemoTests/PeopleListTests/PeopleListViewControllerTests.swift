@@ -28,7 +28,7 @@ class PeopleListViewControllerTests : QuickSpec {
             }
 
             it("should return the correct cell with label set") {
-                let cell = viewController.tableView(viewController.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+                let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
                 expect(cell.textLabel!.text).toEventually(equal("someName"))
                 expect(cell.detailTextLabel!.text).toEventually(equal("Phone: somePhone"))
             }
@@ -41,7 +41,7 @@ class PeopleListViewControllerTests : QuickSpec {
 
                 testableViewController.transitionToDetailsViewForPersonWith(id: id)
 
-                expect(testableViewController.didTransitionToViewController).to(beAKindOf(PersonDetailsViewController))
+                expect(testableViewController.didTransitionToViewController).to(beAKindOf(PersonDetailsViewController.self))
                 let pushedVC = testableViewController.didTransitionToViewController as! PersonDetailsViewController
                 expect(pushedVC.personID) == id
             }

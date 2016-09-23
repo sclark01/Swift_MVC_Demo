@@ -9,7 +9,7 @@ import SwiftyJSON
 class PeopleServiceTests: QuickSpec {
     override func spec() {
         beforeEach {
-            stub(isHost("localhost") && isPath("/list") && isMethodGET()) { request in
+            let _ = stub(condition: isHost("localhost") && isPath("/list") && isMethodGET()) { request in
 
                 let obj = [[
                     "id": 7,
@@ -20,10 +20,10 @@ class PeopleServiceTests: QuickSpec {
                     "name": "Brown Holt",
                 ]]
 
-                return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
+                return OHHTTPStubsResponse(jsonObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
             }
 
-            stub(isHost("localhost") && isPath("/personByID") && isMethodGET()) { request in
+            let _ = stub(condition: isHost("localhost") && isPath("/personByID") && isMethodGET()) { request in
                 let obj = [[
                     "id": 9,
                     "name": "Harry Potter",
@@ -31,10 +31,10 @@ class PeopleServiceTests: QuickSpec {
                     "phone": "wand"
                 ]]
 
-                return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
+                return OHHTTPStubsResponse(jsonObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
             }
 
-            stub(isHost("localhost") && isPath("/listAll") && isMethodGET()) { request in
+            let _ = stub(condition: isHost("localhost") && isPath("/listAll") && isMethodGET()) { request in
 
                 let obj = [[
                     "id": 7,
@@ -49,7 +49,7 @@ class PeopleServiceTests: QuickSpec {
                         "phone" : "somePhone"
                     ]]
 
-                return OHHTTPStubsResponse(JSONObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
+                return OHHTTPStubsResponse(jsonObject: obj, statusCode: 200, headers: nil).responseTime(OHHTTPStubsDownloadSpeed3G)
                 
             }
         }

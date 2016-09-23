@@ -5,17 +5,17 @@ platform :ios, '9.3'
 use_frameworks!
 
 def testing_pods
-  pod 'Quick', '~> 0.9.2'
-  pod 'Nimble', '~> 4.0.1'
+  pod 'Quick', '~> 0.10.0'
+  pod 'Nimble', '~> 5.0.0'
   pod 'OHHTTPStubs'
   pod 'OHHTTPStubs/Swift'
 end
 
 def networking_pods 
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.0'
 end
 
-pod 'SwiftyJSON'
+pod 'SwiftyJSON', '~> 3.0.0'
 
 target 'MVC_Demo' do
   networking_pods

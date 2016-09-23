@@ -24,7 +24,7 @@ class PersonDetailsViewController : UIViewController {
         }
     }
 
-    private func updateLabels(withPerson person: Person) {
+    fileprivate func updateLabels(withPerson person: Person) {
         nameLabel.text = "Name: \(person.name)"
         if let age = person.age {
             ageLabel.text = "Age: \(age)"

@@ -10,14 +10,14 @@ class PeopleListViewController : UIViewController {
         getPeople()
     }
 
-    private func getPeople() {
+    fileprivate func getPeople() {
         peopleService.getAllPeopleWithDetails { [weak self] people in
             self?.people = people
             self?.tableView.reloadData()
         }
     }
 
-    internal func transitionToDetailsViewForPersonWith(id id: Int) {
+    internal func transitionToDetailsViewForPersonWith(id: Int) {
         let storyBoard = UIStoryboard(name: "PersonDetails", bundle: nil)
         guard let viewController = storyBoard.instantiateInitialViewController() as? PersonDetailsViewController else { return }
         viewController.personID = id
@@ -30,20 +30,20 @@ class PeopleListViewController : UIViewController {
 }
 
 extension PeopleListViewController : UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people?.count ?? 0
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "personCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) ?? UITableViewCell(style: .Subtitle, reuseIdentifier: cellIdentifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
 
         if let people = people {
-            let person = people[indexPath.row]
+            let person = people[(indexPath as NSIndexPath).row]
             cell.textLabel?.text = person.name
             cell.detailTextLabel?.text = "Phone: \(person.phone ?? "")"
         }
@@ -53,9 +53,9 @@ extension PeopleListViewController : UITableViewDataSource {
 }
 
 extension PeopleListViewController : UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let people = people else { return }
-        transitionToDetailsViewForPersonWith(id: people[indexPath.row].id)
+        transitionToDetailsViewForPersonWith(id: people[(indexPath as NSIndexPath).row].id)
     }
 }
