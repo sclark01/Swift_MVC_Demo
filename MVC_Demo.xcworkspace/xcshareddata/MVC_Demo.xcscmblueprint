@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C120DB15EFF07375741FA6FB99EDDD12EBF331FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8FE2B4BB55A3C9D7B3B78FD1E2302636E924BDDC" : 9223372036854775807,
+    "C120DB15EFF07375741FA6FB99EDDD12EBF331FC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "314C24CE-99AE-404E-AABC-CB703ED99AAC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8FE2B4BB55A3C9D7B3B78FD1E2302636E924BDDC" : "MVC_Demo\/vaporServer\/Packages\/Jay-1.0.0\/",
+    "C120DB15EFF07375741FA6FB99EDDD12EBF331FC" : "MVC_Demo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MVC_Demo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MVC_Demo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DanToml\/Jay.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8FE2B4BB55A3C9D7B3B78FD1E2302636E924BDDC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:sclark01\/Swift_MVC_Demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C120DB15EFF07375741FA6FB99EDDD12EBF331FC"
+    }
+  ]
+}
